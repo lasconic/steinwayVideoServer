@@ -101,7 +101,7 @@
             }
             else if(data.message==144) {
               //systematically send a noteoff before note on..., we got problem with Yamaha keyboard and entrelaced notes...
-              //Jazz.MidiOut(0x80,data.note);
+              Jazz.MidiOut(0x80,data.note);
               Jazz.MidiOut(0x90,data.note,data.velocity*volume/100);
             }
             else if(data.message==176) {
